@@ -4,8 +4,6 @@ my $output_file = $ARGV[1];
 open my $in_fh, '<', $input_file or die "Could not open file $input_file: $!";
 open my $out_fh, '>', $output_file or die "Could not open file $output_file: $!";
 
-# Print header line
-print $out_fh "Chromosome\tStart\tEnd\tRef\tAlt\tNM84_2038\n";
 
 while (my $line = <$in_fh>) {
     chomp $line;
