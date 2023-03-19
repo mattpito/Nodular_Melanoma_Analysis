@@ -8,3 +8,8 @@ Note: For ANNOVAR, whenever there is a deletion or instertion, it is represented
 | G | GACTACT |
 
 However for ANNOVAR REF would be indicated as "-" and ALT as "ACTACT". Therefore start and end positions of the variant slightly change. The code also accounts for that.
+## parse.mpileup.pl
+Parse information from samtools/bcftools mpileup. The format looks like:
+ #CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT  TUMOUR
+CHROM, POS, REF, ALT, DP4 from INFO are extracted into a tabular delimited .txt file
+Script takes input and output as arguments
