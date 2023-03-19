@@ -13,3 +13,5 @@ Parse information from samtools/bcftools mpileup. The format looks like:
  #CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT  TUMOUR
 CHROM, POS, REF, ALT, DP4 from INFO are extracted into a tabular delimited .txt file
 Script takes input and output as arguments
+## filter.mpileup.pl
+Use the DP4 column which holds integer a,b,c,d ( where a,b are fw/rev reference reads and c,d are fw/rev alt reads) to keep values with at least 10 reads (a+b+c+d), at least 4 tumour reads ( c+d) and at least 10% MAF (c+d+/(a+b+c+d)
