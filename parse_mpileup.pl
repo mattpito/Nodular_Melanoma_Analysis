@@ -15,8 +15,8 @@ while (my $line = <$fh_in>) {
     next if $line =~ /^#/;
     # split the line into fields
     my @fields = split /\t/, $line;
-    # extract the desired fields
-    my ($chrom, $pos, $ref, $alt, $info) = @fields[1, 2, 3, 4, 7];
+    # extract the desired fields. Up to you, depending on your file format
+    my ($chrom, $pos, $ref, $alt, $info) = @fields[0, 1, 3, 4, 7];
     my ($dp4) = $info =~ /DP4=([\d,]+)/;
     # write the output line
     print $fh_out "$chrom\t$pos\t$ref\t$alt\t$dp4\n";
