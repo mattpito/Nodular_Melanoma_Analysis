@@ -1,0 +1,4 @@
+#swap header name from NA to local_copy_number
+sed -i '1s/NA/local_copy_number/'
+#ADD PURITY COLUMN and 0.8 value for all entries
+sed -i '1s/$/\tPurity/; 2,$s/$/\t0.8/
